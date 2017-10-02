@@ -1,0 +1,11 @@
+{
+  "name": "ios11-gum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/positlabs/ios11-gum.git",
+  "author": "jbeckwith <josh.beckwith@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo --ssl"
+  }
+}
