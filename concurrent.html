@@ -13,11 +13,22 @@
         video {
             position: absolute;
             width: 100%; height: 100%;
+            left: 0; bottom: 0;
             transform: scaleX(-1);
+        }
+        .buttons {
+            position: absolute;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
+    <div class="buttons">
+        <!-- <button id='playVid'>play video</button> -->
+        <button id='playSong'>play audio</button>
+        <!-- <button id='playBoth'>play both</button> -->
+    </div>
+    <!-- <video src='./assets/mov_bbb.mp4' playsinline muted></video> -->
     <video autoplay playsinline muted></video>
     <audio src='./assets/sample.mp3'></audio>
     <script>
@@ -31,13 +42,20 @@
             }
         }
 
-        navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
-            video.srcObject = stream
-            // video.play()
-        })
-        document.body.addEventListener('click', function(){
+        // navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
+        //     video.srcObject = stream
+        //     // video.play()
+        // })
+        // document.querySelector('#playVid').addEventListener('click', function(){
+        //     video.play()
+        // })
+        document.querySelector('#playSong').addEventListener('click', function(){
             audio.play()
         })
+        // document.querySelector('#playBoth').addEventListener('click', function(){
+        //     audio.play()
+        //     video.play()
+        // })
     </script>
     
 </body>
